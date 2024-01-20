@@ -1,0 +1,23 @@
+﻿@page
+@using ICT2106WebApp.Pages
+@model IndexModel
+@{
+    ViewData["Title"] = "Labs & Team Project";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Lab Sessions</h1>
+    <p>Welcome to ICT2106 Software Design. In this page, you will find materials to your labs and tutorials. Here are
+        some of the lab exercises.</p>
+    <p>Lab1 - Weeks 1 and 2</p>
+    <p>Lab 2 - Week 3</p>
+    <p>Lab 3 - Week 4 and 5</p>
+    <p>My team name is @Model.ProjectTeamName</p>
+    <p>
+        @for (int num = 0; num < @Model.memberNames.Count; num++)
+        {
+            @Model.memberNames[num]
+            <br>
+        }
+    </p>
+</div>
